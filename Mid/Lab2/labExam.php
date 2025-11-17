@@ -72,11 +72,20 @@
                 }
                 if(!email.includes("@")){
                     alert("email must contain @");
+                    return false;
                 }
                 if(password != confirmpassword){
                     alert ("Password should match");
                     return false;
                 }
+
+                status.innerHTML =`
+                       <strong>Registration complete!</strong><br> <br>
+                       Full Name = ${fullname} <br>
+                       Email : ${email} <br>
+
+                `;
+                return false;
             }
         </script>
     </html>
