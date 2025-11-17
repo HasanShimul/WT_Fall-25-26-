@@ -11,7 +11,7 @@
         <body>
            <center id="registration">
             <h1>Student Registration</h1>
-            <form action="">
+            <form onsubmit="return handleSubmit()">
                 <table>
                     <tr>
                         <td>
@@ -21,7 +21,7 @@
                     </tr>
                     <tr>
                     <td>
-                            <input type="text" placeholder="Shimul">
+                            <input type="text" placeholder="Shimul" id="fullname">
                         </td>
                     </tr>
                     <tr>
@@ -30,12 +30,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="email" placeholder="abc@gmail.com"></td>
+                        <td><input type="email" placeholder="abc@gmail.com" id="email"></td>
                     </tr>
                     <tr><td><label for="">Password:</label></td></tr>
-                    <tr><td><input type="password" placeholder="*******"></td></tr>
+                    <tr><td><input type="password" placeholder="*******" id="password"></td></tr>
                     <tr><td><label for="">Confirm Password:</label></td></tr>
-                    <tr><td><input type="password"  placeholder="******"></td></tr>
+                    <tr><td><input type="password"  placeholder="******" id="confirmpassword"></td></tr>
                 </table>
                 <button type="submit">Register</button>
             </form>
@@ -57,4 +57,12 @@
             </form>
            </center>
         </body>
+        <script>
+            function handleSubmit(){
+                let fullname = document.getElementById("fullname").value;
+                let email = document.getElementById("email").value;
+                let  password = document.getElementById("password").value;
+                let confirmpassword = document.getElementById("confirmpassword").value;
+            }
+        </script>
     </html>
