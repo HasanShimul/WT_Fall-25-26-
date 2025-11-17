@@ -67,11 +67,14 @@
 
 
                 if(fullname === "" || email === "" || password === "" || confirmpassword === ""){
-                    status.innerHTML = "All fields are requird";
+                    aleert("All fields are requird");
                     return false;
                 }
+                if(!email.includes("@")){
+                    alert("email must contain @");
+                }
                 if(password != confirmpassword){
-                    status.innerHTML = "Password should match";
+                    alert ("Password should match");
                     return false;
                 }
             }
