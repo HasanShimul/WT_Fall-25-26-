@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html>
         <head>
             <title>Lab exam</title>
@@ -39,7 +39,7 @@
                 </table>
                 <button type="submit">Register</button>
             </form>
-            <div id="registration-message"></div>
+            <div id="status"></div>
            </center> 
            <center>
             <p>Course Registration</p>
@@ -59,10 +59,21 @@
         </body>
         <script>
             function handleSubmit(){
-                let fullname = document.getElementById("fullname").value;
-                let email = document.getElementById("email").value;
+                let fullname = document.getElementById("fullname").value.trim();
+                let email = document.getElementById("email").value.trim();
                 let  password = document.getElementById("password").value;
                 let confirmpassword = document.getElementById("confirmpassword").value;
+                let status = document.getElementById("status");
+
+
+                if(fullname === "" || email === "" || password === "" || confirmpassword === ""){
+                    status.innerHTML = "All fields are requird";
+                    return false;
+                }
+                if(password != confirmpassword){
+                    status.innerHTML = "Password should match";
+                    return false;
+                }
             }
         </script>
     </html>
