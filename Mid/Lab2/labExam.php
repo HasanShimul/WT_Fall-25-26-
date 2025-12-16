@@ -30,7 +30,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="email" placeholder="abc@gmail.com" id="email"></td>
+                        <td><input type="text" placeholder="abc@gmail.com" id="email"></td>
                     </tr>
                     <tr><td><label for="">Password:</label></td></tr>
                     <tr><td><input type="password" placeholder="*******" id="password"></td></tr>
