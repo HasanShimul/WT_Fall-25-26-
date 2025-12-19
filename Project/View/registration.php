@@ -7,7 +7,7 @@
         <button id="day-night">Day/Night</button>
        <div class="registration-panel">
         <img id="bg-img" src="../Picture/doctorRegistration.jpeg" alt="Doctor Registration Image" width="100%" height="100%">
-       <h1 style="color: white;">Doctor Registratioin Panel</h1>
+       <h1 >Doctor Registratioin Panel</h1>
         <div>
             <div>
                 <form action="" method="POST">
@@ -22,6 +22,14 @@
                     <div class="input-panel">
                         <label for="phone">Phone</label>
                         <input type="text" name="phone" id="phone">
+                    </div>
+                    <div class="input-panel">
+                        <label for="password">Password</label>
+                        <input type="text" name="password" id="password">
+                    </div>
+                    <div class="input-panel">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="text" name="confirm-panel" id="confirm-password">
                     </div>
                     <div class="input-panel">
                         <label for="medical-degree">Medical-Degree</label>
