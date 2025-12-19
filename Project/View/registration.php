@@ -1,44 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" >
-
-        <style>
-            *{
-                margin: 0rem;
-                padding: 0rem;
-            }
-         .registration-panel{
-           
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-         }
-        .input-panel{
-
-            width: 100%;
-            margin: 0.5rem;
-            border: 0.15rem solid blue;
-            padding: 0.5rem;
-            border-radius: 10px;
-            font-size: 1rem;
-             
-        }
-        .input-panel input{
-            padding: 0.2rem;
-            border-radius: 6px;
-        }
-        #day-night{
-            position: absolute;
-            right: 0px;
-        }
-        #bg-img{
-            position: absolute;
-            z-index: -1;
-            opacity: 0.7;
-        }
-        </style>
+        <link rel="stylesheet" href="../View/Style/registration.css">
     </head>
     <body>
         <button id="day-night">Day/Night</button>
