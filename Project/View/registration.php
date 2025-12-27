@@ -5,11 +5,16 @@
     </head>
     <body>
         <button id="day-night">Day/Night</button>
+
+<div class="logo-container">
+<img id="logo" src="../Picture/doctorLogo.png" width="50"  alt="dotorlogo">
+
+</div>
        <div class="registration-panel">
         <img id="bg-img" src="../Picture/doctorRegistration.jpeg" alt="Doctor Registration Image" width="100%" height="100%">
        <h1 >Doctor Registratioin Panel</h1>
         <div>
-            <div>
+            <div >
                 <form action="" method="POST">
                     <div class="input-panel">
                         <label for="name">Name</label>
