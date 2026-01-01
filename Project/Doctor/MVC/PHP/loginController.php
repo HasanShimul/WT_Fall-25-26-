@@ -7,8 +7,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST["password"];
 
     $loginStatus = loginCheck($username,$password);
+
     if($loginStatus){
-        echo "Login";
+       // sessio_start();
+       // $_SESSION["username"] = $username;
+        //$_SESSION["role"] =  "doctor";
+        header("Location: ../HTML/doctordashboard.php");
+        exit();
     }
     else{
         echo "Cant login";
