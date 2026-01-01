@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-    <form  action="" method="POST">
+    <form  action="../PHP/loginController.php" method="POST">
         <table>
             <tr>
                 <td><label for="username">Name : </label></td>
