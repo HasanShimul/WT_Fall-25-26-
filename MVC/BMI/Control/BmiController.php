@@ -14,7 +14,8 @@ class BmiController {
 
         $model = new BmiModel();
         $bmi = $model->calculate($height, $weight);
-
+        $check = $model->savetoDB($name,$height,$weight);
+        
         require "View/result.php";
     }
 }

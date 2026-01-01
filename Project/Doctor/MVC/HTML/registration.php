@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../View/Style/registration.css">
+        <link rel="stylesheet" href="../HTML/Style/registration.css">
     </head>
     <body>
         <button id="day-night">Day/Night</button>

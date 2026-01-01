@@ -6,4 +6,7 @@ class BmiModel {
         $heightInMeter = $height / 100;
         return $weight / ($heightInMeter * $heightInMeter);
     }
+    public function savetoDB($name,$hieght,$weight){
+        return true;
+    }
 }

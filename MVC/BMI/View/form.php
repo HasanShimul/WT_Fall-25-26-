@@ -11,8 +11,8 @@
 </style>
 <body id="body">
     <center>
-    <h2>Enter Your Details</h2>
     <button id="mode">Day/Night</button>
+    <h2>Enter Your Details</h2>
     <form method="POST" action="">
         Name: <input type="text" name="name"  ><br><br>
         Height (cm): <input type="number" name="height"  ><br><br>
@@ -23,7 +23,7 @@
 </body>
 <script>
       const btn =  document.getElementById("mode");
-       
+
     btn.addEventListener('click',()=>{
       body.classList.toggle("night");
        

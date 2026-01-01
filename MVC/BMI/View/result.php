@@ -25,13 +25,20 @@
         } else {
             echo "You are obese.";
         }
+    
+        if($check){
+            echo "\nInserted";
+        }
+        else{
+            echo "\nNot inserted";
+        }
     ?>
     <br><br>
     <a href="main.php">Calculate again</a>
     </center>
 </body>
 <script>
-    
+
     const btn = document.getElementById("mode");
     const frame = document.body;
 

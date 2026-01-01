@@ -1,7 +1,4 @@
 <?php
-
- 
-
 require_once "Control/BmiController.php";
 
 $controller = new BmiController();
