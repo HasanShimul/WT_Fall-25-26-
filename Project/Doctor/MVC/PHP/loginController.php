@@ -1,5 +1,5 @@
 <?php
-include_once '../HTML/login.php';
+session_start();
 include_once '../DB/db.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -9,15 +9,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $loginStatus = loginCheck($username,$password);
 
     if($loginStatus){
-       // sessio_start();
-       // $_SESSION["username"] = $username;
-        //$_SESSION["role"] =  "doctor";
+        $_SESSION["username"] = $username;
+        $_SESSION["role"] =  "doctor";
         header("Location: ../HTML/doctordashboard.php");
         exit();
     }
     else{
         echo "Cant login";
     }
-
 }
+include_once '../HTML/login.php';
 ?>
