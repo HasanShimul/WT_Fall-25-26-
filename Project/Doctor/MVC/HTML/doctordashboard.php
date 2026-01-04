@@ -6,17 +6,22 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="../HTML/Style/doctordashboard.css">
     <title>Doctor dashboard</title>
 </head>
 <body>
-    <nav>
-        <p>Welcome DR <?php echo $_SESSION["username"]; ?></p>
-        <ul>
-           <li><button>Home</button></li>
-           <li><button>Report</button></li>
-           <li><button>Profile</button></li>
-           <li><button>Logout</button></li>
-        </ul>
+    <nav id="navVar">
+        <div>
+            <p>Welcome DR <?php echo $_SESSION["username"]; ?></p>
+        </div>
+        <div>
+          <ul>
+            <li><button>Home</button></li>
+            <li><button>Report</button></li>
+            <li><button>Profile</button></li>
+            <li><button>Logout</button></li>
+           </ul>
+        </div>
     </nav>
     
 </body>
