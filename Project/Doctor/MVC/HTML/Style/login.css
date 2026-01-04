@@ -7,17 +7,43 @@ body{
    min-height: 100vh;
    width: 80%;
     margin: 0rem;
+}
+.container{
+    display: flex;
+    min-height: 100vh;
+      
+}
+.left{
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items:center   ;
+    align-items: center;
+    background-color: #020617;
 }
-h1{
+.left svg{
+   width: 90%; 
+   height: auto;
+}
+.right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    background-color: #020617;
+}
+.right h1{
+    font-size: 2.5rem;
     margin-top: 2rem; 
+    background: transparent;
     
 }
-p{
+.right p{
     margin-bottom: 5rem;
+    color: #94a3b8;
+    background: transparent;
 }
+ 
 label{
     display: block;
    font-size: 1.5rem;
@@ -30,6 +56,7 @@ input{
     font-size: 1rem;
     border-radius:0.5rem;
     margin-bottom: 1rem;
+    background-color: #444444;
 
 }
 button abbr{

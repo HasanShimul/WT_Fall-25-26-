@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
     <link rel="stylesheet" href="../HTML/Style/login.css">
+
+    <link rel="icon" href="../Favicon/loginFavicon.png" type="image/png">
+
     </head>
 <body >
+    
     <div class="container">
+
     <div class="left">
     <svg
     viewBox="0 0 800 600"
@@ -76,7 +81,6 @@
 <h1>Hospital Login</h1>
 <p>Please sign in to continue</p>
     <center>
-       
     <form  action="../PHP/loginController.php" method="POST">
         <table>
             <tr>
@@ -86,9 +90,6 @@
             <tr>
                 <td><label for="password">Password : </label></td>
                 <td><input type="password"name="password" id="password"></td>
-            </tr>
-            <tr>
-                <td></td>
             </tr>
         </table>
         
