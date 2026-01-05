@@ -5,12 +5,12 @@
     
  }
 ul li{
-    padding: 0.5rem;
+   padding: 0.5rem;
    list-style: none;
 
 }
  #navVar{
-    background-color: rgb(40,20,20);
+    background-color:  #020617;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -18,3 +18,19 @@ ul li{
     flex-wrap: wrap;
 
  }
+ul li button{
+   padding: 0.125rem;
+   border-radius: 0.5rem;
+   font-size: 1rem;
+   font-family:'Times New Roman', Times, serif;
+}
+
+ #logoutbutton a{
+   color: red;
+   text-decoration: none;
+ }
+ button a{
+   color: black;
+   text-decoration: none;
+ }
+

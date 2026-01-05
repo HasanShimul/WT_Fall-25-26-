@@ -18,11 +18,14 @@ session_start();
           <ul>
             <li><button>Home</button></li>
             <li><button>Report</button></li>
-            <li><button>Profile</button></li>
-            <li><button>Logout</button></li>
+            <li><button id="profileButton"><a href="profile.php">Profile</a></button></li>
+            <li><button id="logoutbutton"><a href="../PHP/logoutController.php">Logout</a></button></li>
            </ul>
         </div>
     </nav>
+    <main>
+        <div></div>
+    </main>
     
 </body>
 </html>

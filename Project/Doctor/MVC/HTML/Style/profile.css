@@ -1,0 +1,12 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+    background-color: #121212;
+    color: white;
+}
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+   
+}
