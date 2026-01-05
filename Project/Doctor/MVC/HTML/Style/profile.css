@@ -1,9 +1,25 @@
 *{
     margin: 0rem;
     padding: 0rem;
-    background-color: #121212;
-    color: white;
+    
 }
+:root {
+    --bg-color: #ffffff;  
+    --text-color: #000000;  
+  }
+@media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #000000;  
+      --text-color: #ffffff;  
+    }
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 1s ease , color 0.3s ease;  
+  }
+
 main{
     display: flex;
     justify-content: center;
