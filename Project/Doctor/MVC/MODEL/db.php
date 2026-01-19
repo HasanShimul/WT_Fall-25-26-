@@ -55,12 +55,18 @@ function checkValidation(array $data): array
       }
     }
   }
-  if ($cleanData["password"] !== $cleanData["cpassword"]) {
-    $error["cpassword"] = "Password dont match";
+  if ($cleanData['password'] !== $cleanData['cpassword']) {
+    $error['cpassword'] = "Password dont match";
   }
 
   return $error;
 
+}
+
+function registerDoctor(array $data): array{
+  $conn = getConnection();
+
+  sql = "INSERT INTO Doctor"
 }
 
 function loginCheck($username, $password)

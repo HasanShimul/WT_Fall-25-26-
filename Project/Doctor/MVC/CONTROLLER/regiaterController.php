@@ -1,7 +1,6 @@
 <?php
 require_once("../MODEL/db.php");
-//include_once '../VIEW/registration.php';
-$ValidationStatus = [];
+ $ValidationStatus = [];
 
 if (isset($_POST['submit'])) {
 
@@ -23,7 +22,7 @@ if (isset($_POST['submit'])) {
     $old = $data;
 
     if (empty($ValidationStatus)) {
-        echo "Validation passed";
+         $registrationStatus = registerDoctor($data);
     } 
     
 
