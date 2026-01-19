@@ -23,6 +23,14 @@ if (isset($_POST['submit'])) {
 
     if (empty($ValidationStatus)) {
          $registrationStatus = registerDoctor($data);
+         if($registrationStatus == true) {
+            //echo "Register";
+            header("Location: ../start.php");
+            exit();
+         }
+         else{
+            echo "Not register";
+         }
     } 
     
 

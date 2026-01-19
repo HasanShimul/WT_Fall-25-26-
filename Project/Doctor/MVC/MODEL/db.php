@@ -63,7 +63,7 @@ function checkValidation(array $data): array
 
 }
 
-function registerDoctor(array $data): array{
+function registerDoctor(array $data){
   $conn = getConnection();
 
   $hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
@@ -73,6 +73,11 @@ function registerDoctor(array $data): array{
   VALUES('{$data['name']}','{$data['email']}', '{$data['phone']}','{$hashedPassword}',
   '{$data['medical_degree']}','{$data['specilization']}','{$data['license_number']}',
   '{$data['yearofexperience']}','{$data['fee']}','{$data['availableTime']}') ";
+
+if($conn->query($sql) === TRUE){
+  return true;
+}
+return false;
 }
 
 function loginCheck($username, $password)
