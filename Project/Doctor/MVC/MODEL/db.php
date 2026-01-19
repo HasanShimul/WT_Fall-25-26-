@@ -66,7 +66,13 @@ function checkValidation(array $data): array
 function registerDoctor(array $data): array{
   $conn = getConnection();
 
-  sql = "INSERT INTO Doctor"
+  $hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
+
+  $sql = "INSERT INTO Doctor (name, email, phone, password, medical_degree, specilization,
+                              license_number, yearofexperience, fee, availableTime)
+  VALUES('{$data['name']}','{$data['email']}', '{$data['phone']}','{$hashedPassword}',
+  '{$data['medical_degree']}','{$data['specilization']}','{$data['license_number']}',
+  '{$data['yearofexperience']}','{$data['fee']}','{$data['availableTime']}') ";
 }
 
 function loginCheck($username, $password)
