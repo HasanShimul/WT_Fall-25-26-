@@ -1,6 +1,6 @@
 <?php
 require_once("../MODEL/db.php");
- $ValidationStatus = [];
+$ValidationStatus = [];
 
 if (isset($_POST['submit'])) {
 
@@ -22,18 +22,13 @@ if (isset($_POST['submit'])) {
     $old = $data;
 
     if (empty($ValidationStatus)) {
-         $registrationStatus = registerDoctor($data);
-         if($registrationStatus == true) {
+        $registrationStatus = registerDoctor($data);
+        if ($registrationStatus == true) {
             //echo "Register";
             header("Location: ../start.php");
             exit();
-         }
-         else{
-            echo "Not register";
-         }
-    } 
-    
-
-}  
+        }
+    }
+}
 include_once '../VIEW/registration.php';
 ?>

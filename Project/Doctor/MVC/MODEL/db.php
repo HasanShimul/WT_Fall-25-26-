@@ -82,8 +82,22 @@ return false;
 
 function loginCheck($username, $password)
 {
+  $username = testData($username);
 
-  return true;
+  $conn = getConnection();
+  $sql = "SELECT * FROM Doctor WHERE name = '$username'";
+  $result = mysqli_query($conn,$sql);
+
+  if(mysqli_num_rows($result) >0){
+    $row = mysqli_fetch_assoc($result);
+    
+    if(password_verify($password, $row["password"])){
+      return $row;
+    }
+
+     
+  }
+ return false;
 }
 
 ?>
