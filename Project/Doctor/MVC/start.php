@@ -1,4 +1,6 @@
 <?php 
- header("Location: HTML/login.php");
+
+
+ header("Location: VIEW/login.php");
 
 ?>

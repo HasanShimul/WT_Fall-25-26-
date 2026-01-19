@@ -42,3 +42,12 @@ top: 0;
     background-color: transparent;
     opacity: 0.5;
 }
+#registerButton{
+    color: white;
+    background-color: blue;
+    width: full;
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+
+}

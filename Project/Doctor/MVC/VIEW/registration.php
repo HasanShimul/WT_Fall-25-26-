@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../HTML/Style/registration.css">
+        <link rel="stylesheet" href="../VIEW/CSS/registration.css">
     </head>
     <body>
         <button id="day-night">Day/Night</button>
@@ -15,7 +15,9 @@
        <h1 >Doctor Registratioin Panel</h1>
         <div>
             <div >
+
                 <form action="" method="POST">
+
                     <div class="input-panel">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name">
@@ -82,7 +84,7 @@
                     </select>
                    </div>
 
-                    <button type="submit">Registration</button>
+                    <button id="registerButton" type="submit" name="submit">Registration</button>
                 </form>
             </div>
         </div>
