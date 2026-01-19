@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../VIEW/CSS/registration.css">
-    </head>
-    <body>
-        <button id="day-night">Day/Night</button>
 
-<div class="logo-container">
-<img id="logo" src="../Picture/doctorLogo.png" width="50"  alt="dotorlogo">
+<head>
+    <link rel="stylesheet" href="../VIEW/CSS/registration.css">
+</head>
 
-</div>
-       <div class="registration-panel">
-        <img id="bg-img" src="../Picture/doctorRegistration.jpeg" alt="Doctor Registration Image" width="100%" height="100%">
-       <h1 >Doctor Registratioin Panel</h1>
+<body>
+    <button id="day-night">Day/Night</button>
+
+    <div class="logo-container">
+        <img id="logo" src="../Picture/doctorLogo.png" width="50" alt="dotorlogo">
+
+    </div>
+    <div class="registration-panel">
+        <img id="bg-img" src="../Picture/doctorRegistration.jpeg" alt="Doctor Registration Image" width="100%"
+            height="100%">
+        <h1>Doctor Registratioin Panel</h1>
         <div>
-            <div >
+            <div>
 
                 <form action="" method="POST">
 
@@ -24,7 +27,11 @@
                     </div>
                     <div class="input-panel">
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email">
+                        <input type="text" id="email" name="email" value="<?= htmlspecialchars($old['email'] ?? '') ?>">
+                        <?php if (!empty($ValidationStatus['email'])): ?>
+                            <small class="error"><?= $ValidationStatus['email'] ?></small>
+                        <?php endif; ?>
+
                     </div>
                     <div class="input-panel">
                         <label for="phone">Phone</label>
@@ -73,21 +80,22 @@
                         <label for="fee">Consultation Fee</label>
                         <input type="number" name="fee" id="fee">
                     </div>
-                   <div class="input-panel">
-                    <label for="availableTime">Available Time</label>
-                    <select name="availableTime" id="availableTime">
-                        <option value=""></option>
-                        <option value="option1">Saturday-Thursday</option>
-                        <option value="option2">Sunday-Wednesday</option>
-                        <option value="option3">Friday</option>
-                        <option value="others">Others</option>
-                    </select>
-                   </div>
+                    <div class="input-panel">
+                        <label for="availableTime">Available Time</label>
+                        <select name="availableTime" id="availableTime">
+                            <option value=""></option>
+                            <option value="option1">Saturday-Thursday</option>
+                            <option value="option2">Sunday-Wednesday</option>
+                            <option value="option3">Friday</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
 
                     <button id="registerButton" type="submit" name="submit">Registration</button>
                 </form>
             </div>
         </div>
-       </div>
-    </body>
+    </div>
+</body>
+
 </html>

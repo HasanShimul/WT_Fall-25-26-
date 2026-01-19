@@ -1,45 +1,72 @@
 <?php
 
-function getConnection(){
+function getConnection()
+{
   $server = "localhost";
   $usename = "admin";
   $password = "123459876";
   $dbname = "webtecdb";
 
-  $conn = mysqli_connect($server,$usename,$password,$dbname);
+  $conn = mysqli_connect($server, $usename, $password, $dbname);
 
   return $conn;
 }
-function testData($data): string{
-  if(empty($data)){
+function testData($data): string
+{
+  if (empty($data)) {
     return "";
   }
   $data = trim($data);
   $data = htmlspecialchars($data);
   return $data;
 }
-function checkValidation(array $data):array{
- 
+function checkValidation(array $data): array
+{
+
   $error = [];
   $cleanData = [];
-  foreach($data as $key => $value){
-      $cleanValue = testData($value);
-      $cleanData[$key] = $cleanValue;
-      if($cleanData[$key] == ""){
-        $error[$key] = "Required";
-        return [
-          'status' => false,
-          'error' => $error,
-          'data'   => $cleanData
-      ];
+
+  foreach ($data as $key => $value) {
+
+    $cleanValue = testData($value);
+    $cleanData[$key] = $cleanValue;
+
+    if ($cleanData[$key] == "") {
+      $error[$key] = "Field is Required";
+      continue;
+
+    } else {
+      if ($key === "email") {
+        if (!filter_var($cleanValue, FILTER_VALIDATE_EMAIL)) {
+          $error[$key] = "Email is not valid";
+        }
       }
-      
+      if ($key === "phone") {
+        $length = strlen($cleanValue);
+        if ($length !== 11) {
+          $error[$key] = "Phone number must be 11 digit";
+        }
+      }
+      if ($key === "password") {
+        $length = strlen($cleanValue);
+        if ($length !== 8) {
+          $error[$key] = "Password must be 8 digit";
+        }
+      }
+    }
   }
+  if ($cleanData["password"] !== $cleanData["cpassword"]) {
+    $error["cpassword"] = "Password dont match";
+  }
+
+  return $error;
+
 }
 
-function loginCheck($username,$password){
-    
-    return true;
+function loginCheck($username, $password)
+{
+
+  return true;
 }
 
 ?>
