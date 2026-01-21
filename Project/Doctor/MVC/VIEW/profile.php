@@ -1,5 +1,9 @@
 <?php
 session_start();
+$updateMsg = "";
+if(isset($_SESSION['updateMSG'])){
+    $updateMsg = $_SESSION['updateMsg'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +24,9 @@ session_start();
                 <form action="" method="POST">
                     <table>
                         <tr>
+                            <td ><?php echo $updateMsg;?></td>
+                        </tr>
+                        <tr>
                             <td><label for="drname">Name : </label></td>
                             <td><input type="text" name="name" id="drname" value="<?php echo $_SESSION['doctor']['name']; ?>"></td>
                         </tr>
@@ -39,7 +46,7 @@ session_start();
                             <td><label for="fee"> Fee</label></td>
                             <td><input type="text" name="fee" id="fee" value="<?php echo $_SESSION['doctor']['fee']; ?>"></td>
                         </tr>
-                         <button type="submit">Save</button>
+                      <tr><td> <button type="submit">Update</button></td></tr>
                     </table>
                 </form>
             </div>

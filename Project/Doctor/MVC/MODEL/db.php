@@ -100,4 +100,25 @@ function loginCheck($username, $password)
  return false;
 }
 
+function updateProfile(array $data){
+   $conn =getConnection();
+
+   $name = testData($data["name"]);
+   $email = testData($data["email"]);
+   $phone = testData($data["phone"]); 
+   $yearofexperience = testData($data["yearofexperience"]);
+   $fee = testData($data["fee"]);
+   $license = testData($data["license"]);
+
+   $sql = "UPDATE Doctor SET 
+   name = '$name',
+   email = '$email',
+   phone = '$phone',
+   yearofexperience = '$yearofexperience',
+   fee = '$fee' WHERE license_number = '$license';
+    ";
+return(mysqli_query($conn,$sql));
+
+}
+
 ?>
