@@ -1,3 +1,13 @@
+<?php
+session_start();
+$InvalidMsg = "";
+if(isset($_SESSION['InvalidMsg'])){
+    $InvalidMsg = $_SESSION['InvalidMsg'];
+    unset($_SESSION['InvalidMsg']);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +45,9 @@
                             <td>
                                 <center><button type="submit"><abbr title="let's go ">Login</abbr></button></center>
                             </td>
+                        </tr>
+                        <tr>
+                            <td Style="color:red;text-align:centere;"><?php echo $InvalidMsg; ?><td>
                         </tr>
                         <tr>
                             <td>
