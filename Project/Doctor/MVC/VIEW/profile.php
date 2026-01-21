@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,16 +17,29 @@
         <div>
             <div><h1>Personal informatin</h1></div>
             <div>
-                <form action="">
+                <form action="" method="POST">
                     <table>
                         <tr>
-                            <td><label for="drname"> </label></td>
-                            <!-- <td><input type="text"></td> -->
+                            <td><label for="drname">Name : </label></td>
+                            <td><input type="text" name="name" id="drname" value="<?php echo $_SESSION['doctor']['name']; ?>"></td>
                         </tr>
                         <tr>
-                            <td><label for="drtype"> </label></td>
-                            <!-- <td><input type="text" name="" id=""></td> -->
+                            <td><label for="email"> Email</label></td>
+                            <td><input type="text" name="email" id="email" value="<?php echo $_SESSION['doctor']['email']; ?>"></td>
                         </tr>
+                        <tr>
+                            <td><label for="phone"> Phone</label></td>
+                            <td><input type="text" name="phone" id="phone" value="<?php echo $_SESSION['doctor']['phone']; ?>"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="yearofexperience"> YoEx</label></td>
+                            <td><input type="text" name="yearofexperience" id="yearofexperience" value="<?php echo $_SESSION['doctor']['yearofexperience']; ?>"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fee"> Fee</label></td>
+                            <td><input type="text" name="fee" id="fee" value="<?php echo $_SESSION['doctor']['fee']; ?>"></td>
+                        </tr>
+                         <button type="submit">Save</button>
                     </table>
                 </form>
             </div>
